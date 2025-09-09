@@ -11,7 +11,6 @@ public class Categoria {
         return idCategoria;
     }
 
-    public String getNomeCategoria(){
-        return nomeCategoria;
+    public String getNomeCategoria(){return nomeCategoria;
     }
 }
