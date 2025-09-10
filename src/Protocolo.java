@@ -22,6 +22,12 @@ public class Protocolo {
         }
     }
 
+    // Singleton vai precisar eu acho
+    public int getIdProtocolo() {
+        return idProtocolo;
+    }
+
+
     //Melhorar isso
     public void getResumo(){
         System.out.println("ID:"+idProtocolo+" Status:"+status+"Criado em:");
