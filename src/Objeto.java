@@ -13,6 +13,11 @@ public class Objeto {
         this.descricao = descricao;
         this.fotoObjeto = fotoObjeto;
         this.status = status;
+    }
 
+    public void alterarStatus(int idObjeto,int statusNovo) {
+        if (idObjeto == statusNovo) {
+            status = statusNovo;
+        }
     }
 }
