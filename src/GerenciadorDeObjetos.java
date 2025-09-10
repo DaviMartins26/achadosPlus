@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import Busca.BuscaStrategy;
+
 public class GerenciadorDeObjetos {
      //Cria a intancia unica (Static)
      private static GerenciadorDeObjetos instanciaObjetos;
@@ -26,11 +28,10 @@ public class GerenciadorDeObjetos {
          objetos.add(objeto); // com bando isso vai precisar mudar certamente
      }
 
-     // instancia que busca de acordo com ID
-     public Objeto buscarProtocolo(int id){
-         // fazer a logica depois
-         return null;
-     }
+    // Busca dinâmica com Strategy
+    public List<Objeto> buscar(BuscaStrategy<Objeto> strategy, String criterio) {
+        return strategy.buscar(objetos, criterio);
+    }
 
      // Instancia pra alterar status do itens
      public void alterarStatus(int idObjeto,int novoStatus){

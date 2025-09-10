@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import Busca.BuscaStrategy;
+
 public class GerenciadorDeProtocolos {
     //Cria a intancia unica (Static)
     private static GerenciadorDeProtocolos instancia;
@@ -26,11 +28,11 @@ public class GerenciadorDeProtocolos {
         protocolos.add(protocolo); // com bando isso vai precisar mudar certamente
     }
 
-    // instancia que busca de acordo com ID
-    public Protocolo buscarProtocolo(int id){
-        // fazer a logica depois
-        return null;
+    // Busca dinâmica com Strategy
+    public List<Protocolo> buscar(BuscaStrategy<Protocolo> strategy, String criterio) {
+        return strategy.buscar(protocolos, criterio);
     }
+
 
     // Instancia pra fecchar o protocolo
     public void fecharProtocolo(int id,String dataAtual,Funcionario funcionario){
