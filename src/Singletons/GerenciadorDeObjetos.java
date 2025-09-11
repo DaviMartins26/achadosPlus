@@ -1,7 +1,10 @@
+package Singletons;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import Busca.BuscaStrategy;
+import Model.Objeto;
 
 public class GerenciadorDeObjetos {
      //Cria a intancia unica (Static)

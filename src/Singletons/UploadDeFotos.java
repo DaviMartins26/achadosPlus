@@ -1,3 +1,7 @@
+package Singletons;
+
+import Model.Foto;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +28,7 @@ public class UploadDeFotos {
     // Simula o upload de foto
     public void uploadFoto(Foto foto){
         fotos.add(foto);
-        System.out.println("Foto Salva"); // melhorar isso
+        System.out.println("Model.Foto Salva"); // melhorar isso
     }
 
     // buscar foto por ID mas vamos fazer com

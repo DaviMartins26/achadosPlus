@@ -1,10 +1,11 @@
 package Busca;
 
+import Model.Protocolo;
 import java.util.ArrayList;
 import java.util.List;
 
-// minha ideia ta acusando erro nos nome das coisas procurar o erro logo
-// ser ta em plural e nomes com P ou p
+// Problemas de não achar as coisas foi corrigido colocando a classe em um Package em um package e importanto ele
+
 public class BuscaProtocoloPorStatus implements BuscaStrategy<Protocolo> {
     @Override
     public List<Protocolo> buscar(List<Protocolo> protocolos, String criterio) {

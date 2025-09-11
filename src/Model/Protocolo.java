@@ -1,3 +1,7 @@
+package Model;
+
+import Pessoas.Funcionario;
+
 public class Protocolo {
     private int idProtocolo;
     private int status; //0-aberto 1-fehcado mesma coisa com objeto
@@ -6,7 +10,7 @@ public class Protocolo {
     private Funcionario funFechado; //funcionario que fechou
     private String dataFechado;
 
-    public Protocolo(int idProtocolo, int status, String dataCriacao,UserAbstrato userAbertura,Funcionario funFechado,String dataFechado){
+    public Protocolo(int idProtocolo, int status, String dataCriacao, UserAbstrato userAbertura, Funcionario funFechado, String dataFechado){
         this.idProtocolo = idProtocolo;
         this.status = 0;
         this.dataCriacao = dataCriacao;
@@ -25,6 +29,10 @@ public class Protocolo {
     // Singleton vai precisar eu acho
     public int getIdProtocolo() {
         return idProtocolo;
+    }
+
+    public int getStatus(){
+        return status;
     }
 
 

@@ -1,16 +1,17 @@
 package Busca;
 
+import Model.Objeto;
 import java.util.ArrayList;
 import java.util.List;
 
-// minha ideia ta acusando erro nos nome das coisas procurar o erro logo
-// ser tem que ser Objeto ou Objetos e ver se o ou O
+// Problemas de não achar as coisas foi corrigido colocando a classe objeto em um package e importanto ele
+
 public class BuscaObjetoPorNome implements BuscaStrategy<Objeto> {
     @Override
     public List<Objeto> buscar(List<Objeto> objetos, String criterio) {
         List<Objeto> resultado = new ArrayList<>();
         for (Objeto o : objetos) {
-            if (o.getNome().equalsIgnoreCase(criterio)) {
+            if (o.getNomeObjeto().equalsIgnoreCase(criterio)) {
                 resultado.add(o);
             }
         }

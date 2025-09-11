@@ -1,3 +1,7 @@
+package Logs;
+
+import Model.UserAbstrato;
+
 public abstract class LogAbstrato {
     int idLog;
     String dataOcorrido;
@@ -9,8 +13,6 @@ public abstract class LogAbstrato {
         this.usuarioResponsavel = usuarioResponsavel;
     }
 
-    void registrarLog(){
-
-    }
-
+    // Template Method → cada subclasse vai implementar sua versão
+    public abstract void registrarLog();
 }

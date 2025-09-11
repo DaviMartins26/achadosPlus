@@ -1,3 +1,5 @@
+package Model;
+
 public class Objeto {
     private int idObjeto;
     private String nomeObjeto;
@@ -6,7 +8,7 @@ public class Objeto {
     private Foto fotoObjeto;
     private int status; // 1-Perdido 2-Encontrado 3- Devolvido (regra de negocio mas podemos mudar pra String pra evitar if else no print da log ou algo assim)
 
-    public Objeto(int idObjeto,String nomeObjeto,Categoria categoria,String descricao,Foto fotoObjeto,int status){
+    public Objeto(int idObjeto, String nomeObjeto, Categoria categoria, String descricao, Foto fotoObjeto, int status){
         this.idObjeto = idObjeto;
         this.nomeObjeto = nomeObjeto;
         this.categoria = categoria;
@@ -20,4 +22,9 @@ public class Objeto {
             status = statusNovo;
         }
     }
+
+    public String getNomeObjeto(){
+           return nomeObjeto;
+        }
 }
+

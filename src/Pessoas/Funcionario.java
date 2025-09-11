@@ -1,12 +1,16 @@
-public class UserNormal extends UserAbstrato {
+package Pessoas;
+
+import Model.UserAbstrato;
+
+public class Funcionario extends UserAbstrato {
     protected int id;
     protected String name;
     protected String email;
     protected String senha;
-    // User tipoUsuario = UserNormal; // se ta errado em fun aqui tambem vai ta
+    // User tipoUsuario = Pessoas.Funcionario; // isso aqui deve estar errado
 
 
-    public UserNormal(int id, String name, String email, String senha) {
+    public Funcionario(int id, String name, String email, String senha) {
         super(id, name, email, senha);
     }
 
@@ -17,7 +21,7 @@ public class UserNormal extends UserAbstrato {
     public void logout(){
 
     }
-    // aqui deveria ser meus Protocolos
+
     public void viewProtocolo(){
 
     }
@@ -30,4 +34,9 @@ public class UserNormal extends UserAbstrato {
     public void exibirMenu(){
 
     }
+
+    public void registrarObjeto(){
+
+    }
+
 }

@@ -1,7 +1,11 @@
+package Singletons;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import Busca.BuscaStrategy;
+import Model.Protocolo;
+import Pessoas.Funcionario;
 
 public class GerenciadorDeProtocolos {
     //Cria a intancia unica (Static)
@@ -35,7 +39,7 @@ public class GerenciadorDeProtocolos {
 
 
     // Instancia pra fecchar o protocolo
-    public void fecharProtocolo(int id,String dataAtual,Funcionario funcionario){
+    public void fecharProtocolo(int id, String dataAtual, Funcionario funcionario){
 
     }
 

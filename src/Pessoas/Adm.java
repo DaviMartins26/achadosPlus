@@ -1,9 +1,11 @@
+package Pessoas;
+
 public class Adm extends Funcionario {
     protected int id;
     protected String name;
     protected String email;
     protected String senha;
-    // User tipoUsuario = Adm; // se ta errado em fun aqui tambem vai ta
+    // User tipoUsuario = Pessoas.Adm; // se ta errado em fun aqui tambem vai ta
 
 
     public Adm(int id, String name, String email, String senha) {

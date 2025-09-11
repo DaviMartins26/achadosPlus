@@ -1,3 +1,5 @@
+package Model;
+
 public class Foto {
     private int idFoto;
     private String caminho; // ex: "fotos/protocolo_01.png" ver como vamos precisar fazer com banco
@@ -22,6 +24,6 @@ public class Foto {
     }
 
     public void exibirFoto() {
-        System.out.println("Foto #" + idFoto + " - " + caminho + " (" + dataUpload + ")");
+        System.out.println("Model.Foto #" + idFoto + " - " + caminho + " (" + dataUpload + ")");
     }
 }

@@ -1,3 +1,5 @@
+package Model;
+
 public class Categoria {
     private int idCategoria;
     private String nomeCategoria;
