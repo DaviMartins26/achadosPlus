@@ -5,12 +5,12 @@ import Model.UserAbstrato;
 
 public class LogProtocolo extends LogAbstrato {
     private Objeto objetoRelacionado;
-    private int oldStatus; // tem como pegar o status direto do objeto? tipo private Objeto objeto.status ou algo assim?
+    private int oldStatus;
     private int newStatus;
 
-    public LogProtocolo(int idLog,String dataOcorrido,UserAbstrato usuarioResponsavel,
-                        Objeto objetoRelacionado, int oldStatus, int newStatus){
-        super(idLog,dataOcorrido,usuarioResponsavel);
+    public LogProtocolo(int idLog, String dataOcorrido, UserAbstrato usuarioResponsavel,
+                        Objeto objetoRelacionado, int oldStatus, int newStatus) {
+        super(idLog, dataOcorrido, usuarioResponsavel);
         this.objetoRelacionado = objetoRelacionado;
         this.oldStatus = oldStatus;
         this.newStatus = newStatus;
@@ -22,9 +22,8 @@ public class LogProtocolo extends LogAbstrato {
                 "ID: " + idLog +
                 ", Data: " + dataOcorrido +
                 ", Usuário: " + usuarioResponsavel +
-                ", Objeto: " + objetoRelacionado +
+                ", Objeto: " + objetoRelacionado.getNomeObjeto() +
                 ", Status antigo: " + oldStatus +
                 ", Status novo: " + newStatus);
     }
-
 }

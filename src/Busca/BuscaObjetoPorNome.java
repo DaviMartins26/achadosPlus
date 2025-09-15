@@ -4,14 +4,12 @@ import Model.Objeto;
 import java.util.ArrayList;
 import java.util.List;
 
-// Problemas de não achar as coisas foi corrigido colocando a classe objeto em um package e importanto ele
-
 public class BuscaObjetoPorNome implements BuscaStrategy<Objeto> {
     @Override
     public List<Objeto> buscar(List<Objeto> objetos, String criterio) {
         List<Objeto> resultado = new ArrayList<>();
         for (Objeto o : objetos) {
-            if (o.getNomeObjeto().equalsIgnoreCase(criterio)) {
+            if (o.getNomeObjeto() != null && o.getNomeObjeto().equalsIgnoreCase(criterio)) {
                 resultado.add(o);
             }
         }

@@ -6,9 +6,9 @@ public class Objeto {
     private Categoria categoria;
     private String descricao;
     private Foto fotoObjeto;
-    private int status; // 1-Perdido 2-Encontrado 3- Devolvido (regra de negocio mas podemos mudar pra String pra evitar if else no print da log ou algo assim)
+    private int status; // 1-Perdido 2-Encontrado 3-Devolvido
 
-    public Objeto(int idObjeto, String nomeObjeto, Categoria categoria, String descricao, Foto fotoObjeto, int status){
+    public Objeto(int idObjeto, String nomeObjeto, Categoria categoria, String descricao, Foto fotoObjeto, int status) {
         this.idObjeto = idObjeto;
         this.nomeObjeto = nomeObjeto;
         this.categoria = categoria;
@@ -17,14 +17,33 @@ public class Objeto {
         this.status = status;
     }
 
-    public void alterarStatus(int idObjeto,int statusNovo) {
-        if (idObjeto == statusNovo) {
-            status = statusNovo;
-        }
+    // Getters
+    public int getIdObjeto() {
+        return idObjeto;
     }
 
-    public String getNomeObjeto(){
-           return nomeObjeto;
-        }
-}
+    public String getNomeObjeto() {
+        return nomeObjeto;
+    }
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public Foto getFotoObjeto() {
+        return fotoObjeto;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    // Setters
+    public void setStatus(int status) {
+        this.status = status;
+    }
+}

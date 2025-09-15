@@ -1,44 +1,39 @@
 package Model;
 
-import Pessoas.Funcionario;
-
 public class Protocolo {
     private int idProtocolo;
-    private int status; //0-aberto 1-fehcado mesma coisa com objeto
-    private String dataCriacao; // usar dado de data de verdade, aqui é so um exemplo
-    private UserAbstrato userAbertura; // pessoa que abriu
-    private Funcionario funFechado; //funcionario que fechou
+    private int status; // 0-aberto 1-fechado
+    private String dataCriacao;
+    private UserAbstrato userAbertura;
+    private Funcionario funFechado;
     private String dataFechado;
 
-    public Protocolo(int idProtocolo, int status, String dataCriacao, UserAbstrato userAbertura, Funcionario funFechado, String dataFechado){
+    public Protocolo(int idProtocolo, int status, String dataCriacao,
+                     UserAbstrato userAbertura, Funcionario funFechado, String dataFechado) {
         this.idProtocolo = idProtocolo;
-        this.status = 0;
+        this.status = status;
         this.dataCriacao = dataCriacao;
         this.userAbertura = userAbertura;
-        this.funFechado = null;
-        this.dataFechado = null;
+        this.funFechado = funFechado;
+        this.dataFechado = dataFechado;
     }
 
-    public void fecharProtocolo(int idProtocoloMudar,String dataAtual) {
+    public int getIdProtocolo() {
+        return idProtocolo;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void fecharProtocolo(int idProtocoloMudar, String dataAtual) {
         if (idProtocolo == idProtocoloMudar) {
             status = 1;
             dataFechado = dataAtual;
         }
     }
 
-    // Singleton vai precisar eu acho
-    public int getIdProtocolo() {
-        return idProtocolo;
+    public String getResumo() {
+        return "ID:" + idProtocolo + " Status:" + status + " Criado em:" + dataCriacao;
     }
-
-    public int getStatus(){
-        return status;
-    }
-
-
-    //Melhorar isso
-    public void getResumo(){
-        System.out.println("ID:"+idProtocolo+" Status:"+status+"Criado em:");
-    }
-
 }
