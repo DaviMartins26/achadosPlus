@@ -4,6 +4,8 @@ import Pessoas.Funcionario;
 
 public class Protocolo {
     private int idProtocolo;
+    // o idiota(eu mesmo) esqueceu de fazer o Objeto dentro no protocolo
+    private Objeto objetoPerdido;
     private int status; //0-aberto 1-fehcado mesma coisa com objeto
     private String dataCriacao; // usar dado de data de verdade, aqui é so um exemplo
     private UserAbstrato userAbertura; // pessoa que abriu
