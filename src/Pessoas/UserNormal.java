@@ -34,4 +34,9 @@ public class UserNormal extends UserAbstrato {
     public void exibirMenu(){
 
     }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
 }

@@ -1,5 +1,6 @@
 package Model;
 
+import Notificacao.NotificacaoSubject; // pra notificar mudanças no Protocolo
 import Pessoas.Funcionario;
 
 public class Protocolo {
@@ -21,10 +22,14 @@ public class Protocolo {
         this.dataFechado = null;
     }
 
-    public void fecharProtocolo(int idProtocoloMudar,String dataAtual) {
-        if (idProtocolo == idProtocoloMudar) {
+    public void fecharProtocolo(int idProtocoloMudar, String dataAtual) {
+        if (idProtocolo == idProtocoloMudar && status == 0) {
             status = 1;
             dataFechado = dataAtual;
+
+            // Dispara notificação automática
+            notificacaoSubject.notifyObservers(this,
+                    "Seu objeto foi localizado/devolvido! Protocolo: " + idProtocolo);
         }
     }
 
@@ -41,6 +46,18 @@ public class Protocolo {
     //Melhorar isso
     public void getResumo(){
         System.out.println("ID:"+idProtocolo+" Status:"+status+"Criado em:");
+    }
+
+
+    // Uma Notificação statica pra ter um meio so, pode ser outro Singleton?
+    private static NotificacaoSubject notificacaoSubject = new NotificacaoSubject();
+
+    public static NotificacaoSubject getNotificacaoSubject() {
+        return notificacaoSubject;
+    }
+
+    public UserAbstrato getUserAbertura() {
+        return userAbertura;
     }
 
 }

@@ -39,4 +39,9 @@ public class Funcionario extends UserAbstrato {
 
     }
 
+    @Override
+    public String getEmail() {
+        return email;
+    }
 }
+
