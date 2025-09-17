@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AchadosPlus - Cadastro</title>
+        <link rel="stylesheet" href="cadastro.css">
+
+    </head>
+<body>
+    <main>
+        <section class="box">
+            <a id="voltar-home" onclick="history.back()">&times;</a>
+
+                    <div class="alinharelementosescrita">
+                        <p id="elemento1">Fazer Cadastro</p>
+                        <p id="elemento2">Digite seus dados e crie uma senha</p>
+                    </div>
+
+                    <form id="form1" name="form1" method="post">
+                        <div class="espacodentrobox">
+                            <p id="label_nome">Nome*: </p><p id="label_cpf">CPF*: </p> <p id="label_senha">Senha*: </p> <p id="label_email">E-mail*: </p><p id="label_confirm">Confirmar Senha*: </p>
+                            <input type="text" name="txtNome" value="" maxlength="100" id="nome_id" placeholder="Ex: Manuel da Silveira" class="campocheio" required>
+                            
+                            <input type="email" name="email" id="email_id" value="" placeholder="seu@email.com" maxlength="100" class="campocheio" required>
+
+                            <input type="text" placeholder="Ex: 12345678910" id="cpf_id" name="txtCPF" value="" maxlength="11" class="campomedio" required>
+
+                            <input type="password" name="txtSenha" value="" id="senha_id" placeholder="Senha" class="campocheio" maxlength="20" required>
+
+                            
+                            <input type="password" name="txtConfirmar" value="" id="confirm" placeholder="Confirme sua Senha" class="campocheio" maxlength="20" required>
+
+                        </div>
+
+                        <div id="buttons">
+                            <a href="../" id="voltar-button">Voltar</a>
+                            <input type="submit" value="Criar conta" id="adicionar">
+                        </div>
+                    </form>
+        </section>
+    </main>
+</body>
+</html>

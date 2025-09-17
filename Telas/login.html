@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AchadosPlus - Login</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+<body>
+    <div id="login-container">  
+
+        <!-- Essa linha deixa aquele X em cima -->
+        <a id="voltar-home" onclick="history.back()">&times;</a> 
+
+        <h3 class="login-h3">Fazer login</h3>
+        <h5 class="login-h5">Digite seu e-mail e senha</h5>
+
+        <form id="form1" method="post">
+            <label for="email_id">Email: </label>
+            <input class="input-login" id="email_id" type="email" placeholder="seu@email.com" name="txtLogin" maxlength="100" required>
+            <label for="senha_id">Senha: </label>
+            <input class="input-login" id="senha_id" type="password" placeholder="Senha" name="txtPassword" maxlength="20" required>
+
+            <div id="buttons">
+                <a id="criar-button" href="cadastro.html">Criar conta</a>
+                <input type="submit" id="enviar" value="Entrar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
