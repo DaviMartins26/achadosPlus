@@ -17,7 +17,7 @@
                         <p id="elemento2">Digite seus dados e crie uma senha</p>
                     </div>
 
-                    <form id="form1" name="form1" method="post" action="cadastroUsuario">
+                    <form id="form1" name="form1" method="post" onsubmit="return verificar()">
                         <div class="espacodentrobox">
                             <p id="label_nome">Nome*: </p><p id="label_cpf">CPF*: </p> <p id="label_senha">Senha*: </p> <p id="label_email">E-mail*: </p><p id="label_confirm">Confirmar Senha*: </p>
                             <input type="text" name="txtNome" value="" maxlength="100" id="nome_id" placeholder="Ex: Manuel da Silveira" class="campocheio" required>
@@ -39,4 +39,5 @@
         </section>
     </main>
 </body>
+<script src="../js/cadastro.js"></script>
 </html>

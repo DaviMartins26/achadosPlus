@@ -1,0 +1,15 @@
+package com.github.davi.AchadosPlus.A_backUpClasses.Relatorio;
+// package com.github.davi.AchadosPlus.Relatorio;
+
+// public class GeradorRelatorio {
+//     private RelatorioStrategy strategy;
+
+// // Permite mudar a estratégia em tempo de execução
+//     public void setStrategy(RelatorioStrategy strategy) {
+//         this.strategy = strategy;
+//     }
+
+//     public void executarRelatorio() {
+//         strategy.gerarRelatorio();
+//     }
+// }
