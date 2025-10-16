@@ -27,4 +27,19 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     private TipoUsuario tipoUsuario;
 
+    public String getNome() {
+        return nome;
+    }
+
+    public Integer getIdUsuario() {
+        return idUsuario;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }

@@ -19,17 +19,18 @@ public class Objeto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idObjeto;
-    private String nomeObjeto;
+    private String nome_objeto;
     @ManyToOne
-    @JoinColumn(name = "objetos")
+    @JoinColumn(name = "categoria")
     private Categoria categoria;
     private String descricao;
     @OneToOne
-    @JoinColumn(name ="objeto")
+    @JoinColumn(name ="foto_relacionada")
     private Foto fotoObjeto;
     private int status; // 1-Perdido 2-Encontrado 3- Devolvido (regra de negocio mas podemos mudar pra String pra evitar if else no print da log ou algo assim)
     @OneToOne
-    private Protocolo protocolo;
+    @JoinColumn(name = "protocolo_relacionado")
+    private Protocolo relacionado;
 
 }
 

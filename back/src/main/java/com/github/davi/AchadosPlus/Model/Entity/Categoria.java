@@ -20,6 +20,7 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCategoria;
     private String nomeCategoria;
-    @OneToMany
-    private List<Objeto> objetos;
+    // Isso tava criando uma nova tabela que não seria usada até onde eu sei, qualquer coisa so descomentar
+    //@OneToMany
+    //private List<Objeto> objetos;
 }
