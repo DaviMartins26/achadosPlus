@@ -16,16 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
                         const tr = document.createElement("tr");
 
                         // Adiciona as células da tabela
-                        tr.innerHTML = `
-                            <td>${protocolo.idprotocolo}</td>
-                            <button class="nome-btn" onclick="verMais(${protocolo.idprotocolo})">${protocolo.nome_objeto}</button>
-                            <td>${protocolo.nome_categoria || '-'}</td>
-                            <td>${protocolo.situacao == 1 ? 'Fechado' : 'Aberto'}</td>
-                            <td>${protocolo.data_perda}</td>
-                            <td>${protocolo.data_abertura}</td>
-                            <td>${protocolo.data_fechamento || '-'}</td>
-                            
-                        `;
+                            tr.innerHTML = `
+                            <td>${protocolo.idProtocolo}</td>
+                            <td>${protocolo.objetoPerdido?.nome_objeto || '-'}</td>
+                            <td>${protocolo.objetoPerdido?.categoria?.nomeCategoria || '-'}</td>
+                            <td>${protocolo.status == 1 ? 'Aberto' : protocolo.status == 2 ? 'Em andamento' : 'Fechado'}</td>
+                            <td>${protocolo.dataCriacao || '-'}</td>
+                            <td>${protocolo.dataFechado || '-'}</td>
+                            `;
+
                             // ver pq situação não filtra tentar especificar melhor
                         tr.dataset.filterContent = `${protocolo.idprotocolo} ${protocolo.nome_objeto} ${protocolo.nome_categoria} ${protocolo.situacao} ${protocolo.data_perda} ${protocolo.data_abertura}${protocolo.data_fechamento }${protocolo.descricao}`;
                         // Adiciona a linha na tabela

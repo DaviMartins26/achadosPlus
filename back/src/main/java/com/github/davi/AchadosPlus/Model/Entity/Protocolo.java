@@ -24,4 +24,27 @@ public class Protocolo {
     //private Usuario funFechado; //funcionario que fechou
     private String dataFechado;
 
+    public void setIdProtocolo(Integer id) {
+    }
+
+    public Integer getIdProtocolo() {
+        return idProtocolo;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public Objeto getObjetoPerdido() {
+        return objetoPerdido;
+    }
+
+    public String getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public String getDataFechado() {
+        return dataFechado;
+    }
+
 }

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProtocoloRepository extends JpaRepository<Protocolo, Integer> {
-    // Aqui você pode colocar filtros específicos no futuro
+    // Filtros devem ficar aqui no futuro? Ou tentar fazer via JS?
 }
