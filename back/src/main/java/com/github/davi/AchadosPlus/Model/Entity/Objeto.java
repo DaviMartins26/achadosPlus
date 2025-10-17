@@ -1,5 +1,6 @@
 package com.github.davi.AchadosPlus.Model.Entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +20,9 @@ public class Objeto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idObjeto;
+    @JsonProperty("nome_objeto")
     private String nome_objeto;
+
     @ManyToOne
     @JoinColumn(name = "categoria")
     private Categoria categoria;
@@ -28,9 +31,9 @@ public class Objeto {
     @JoinColumn(name ="foto_relacionada")
     private Foto fotoObjeto;
     private int status; // 1-Perdido 2-Encontrado 3- Devolvido (regra de negocio mas podemos mudar pra String pra evitar if else no print da log ou algo assim)
-    @OneToOne
-    @JoinColumn(name = "protocolo_relacionado")
-    private Protocolo relacionado;
 
+    public void setStatus(int status) {
+        this.status = status;
+    }
 }
 

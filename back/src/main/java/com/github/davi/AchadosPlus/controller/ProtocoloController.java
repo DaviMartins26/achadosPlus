@@ -23,17 +23,17 @@ public class ProtocoloController {
         return protocoloService.listarTodos();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/busca/{id}")
     public Protocolo buscarPorId(@PathVariable Integer id) {
         return protocoloService.buscarPorId(id);
     }
 
-    @PostMapping
+    @PostMapping("/criar")
     public Protocolo criarProtocolo(@RequestBody Protocolo protocolo) {
         return protocoloService.salvar(protocolo);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/set/{id}")
     public Protocolo atualizarProtocolo(@PathVariable Integer id, @RequestBody Protocolo protocolo) {
         protocolo.setIdProtocolo(id);
         return protocoloService.salvar(protocolo);

@@ -1,0 +1,44 @@
+2025-10-17 20:33:10.434759-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USUARIO" not found (this database is empty); SQL statement:
+INSERT INTO usuario (email, nome, senha, tipo_usuario) VALUES
+('demiurgo@gmail.com', 'Demiurgo', '123', 'ADM'),
+('adilson@gmail.com', 'Adilson', '123', 'NORMAL') [42104-232]
+2025-10-17 20:33:10.448119-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CATEGORIA" not found (this database is empty); SQL statement:
+INSERT INTO categoria (nome_categoria) VALUES
+('Documentos'),
+('Eletrônicos'),
+('Vestuário'),
+('Acessórios'),
+('Material Escolar') [42104-232]
+2025-10-17 20:33:10.451005-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "OBJETO" not found (this database is empty); SQL statement:
+INSERT INTO objeto (nome_objeto, descricao, status, categoria, foto_relacionada) VALUES
+('Carteira de Couro', 'Carteira marrom encontrada próxima ao portão principal.', 1, 3, NULL),
+('Celular Samsung', 'Celular preto com tela trincada.', 2, 1, NULL),
+('Caderno Azul', 'Caderno de anotações com capa azul.', 1, 5, NULL),
+('Jaqueta Jeans', 'Jaqueta jeans feminina, tamanho M.', 3, 4, NULL),
+('RG João Silva', 'Documento de identidade encontrado no pátio.', 1, 2, NULL) [42104-232]
+2025-10-17 20:33:10.453541-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PROTOCOLO" not found (this database is empty); SQL statement:
+INSERT INTO protocolo (objeto_perdido, status, data_criacao, data_fechado) VALUES
+(1, 1, '2025-10-15', NULL),
+(2, 2, '2025-10-14', NULL),
+(3, 1, '2025-10-13', NULL),
+(4, 3, '2025-10-12', '2025-10-14'),
+(5, 1, '2025-10-11', NULL) [42104-232]
+2025-10-17 20:33:10.453541-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BLOCO" not found (this database is empty); SQL statement:
+INSERT INTO bloco(nome_bloco) VALUES
+('Amarelo'),
+('Azul'),
+('Verde') [42104-232]
+2025-10-17 20:33:10.459224-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SALA" not found (this database is empty); SQL statement:
+INSERT INTO sala(id_bloco,nome_sala) VALUES
+(1,'Xavier'),
+(1,'Juan'),
+(2,'Leon'),
+(2,'Gema'),
+(3,'Ashe'),
+(3,'Oni') [42104-232]
